@@ -1,0 +1,20 @@
+inventory_system.py:2:1: F401 'logging' imported but unused
+inventory_system.py:8:1: E302 expected 2 blank lines, found 1
+inventory_system.py:8:49: E262 inline comment should start with '# '
+inventory_system.py:9:21: E261 at least two spaces before inline comment
+inventory_system.py:9:22: E262 inline comment should start with '# '
+inventory_system.py:10:13: E225 missing whitespace around operator
+inventory_system.py:16:1: E302 expected 2 blank lines, found 1
+inventory_system.py:21:21: E261 at least two spaces before inline comment
+inventory_system.py:21:22: E262 inline comment should start with '# '
+inventory_system.py:24:1: E302 expected 2 blank lines, found 1
+inventory_system.py:27:1: E302 expected 2 blank lines, found 1
+inventory_system.py:27:37: E261 at least two spaces before inline comment
+inventory_system.py:27:38: E262 inline comment should start with '# '
+inventory_system.py:32:1: E302 expected 2 blank lines, found 1
+inventory_system.py:32:39: E262 inline comment should start with '# '
+inventory_system.py:36:1: E302 expected 2 blank lines, found 1
+inventory_system.py:41:1: E302 expected 2 blank lines, found 1
+inventory_system.py:48:1: E302 expected 2 blank lines, found 1
+inventory_system.py:59:5: E265 block comment should start with '# '
+inventory_system.py:61:1: E305 expected 2 blank lines after class or function definition, found 1

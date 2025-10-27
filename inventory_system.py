@@ -5,7 +5,9 @@ from datetime import datetime
 # Global variable
 stock_data = {}
 
-def addItem(item="default", qty=0, logs=[]):
+def addItem(item="default", qty=0, logs=None):  #changed logs=[] to logs=None
+    if logs is None: #added
+        logs=[]
     if not item:
         return
     stock_data[item] = stock_data.get(item, 0) + qty
@@ -16,22 +18,20 @@ def removeItem(item, qty):
         stock_data[item] -= qty
         if stock_data[item] <= 0:
             del stock_data[item]
-    except:
+    except KeyError: #fix--KeyError was added
         pass
 
 def getQty(item):
     return stock_data[item]
 
-def loadData(file="inventory.json"):
-    f = open(file, "r")
-    global stock_data
-    stock_data = json.loads(f.read())
-    f.close()
+def loadData(file="inventory.json"): #changes made
+    with open(file, "r") as f:
+        global stock_data
+        stock_data = json.loads(f.read())
 
-def saveData(file="inventory.json"):
-    f = open(file, "w")
-    f.write(json.dumps(stock_data))
-    f.close()
+def saveData(file="inventory.json"):  #changes made
+    with open(file, "w") as f:
+        f.write(json.dumps(stock_data))
 
 def printData():
     print("Items Report")
@@ -56,6 +56,6 @@ def main():
     saveData()
     loadData()
     printData()
-    eval("print('eval used')")  # dangerous
+    #eval("print('eval used')")  # dangerous ---this line is removed
 
 main()
